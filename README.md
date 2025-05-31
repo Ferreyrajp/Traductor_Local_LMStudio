@@ -1,6 +1,6 @@
 # Traductor de Subtítulos con LM Studio
 
-![Captura de pantalla de la aplicación](screenshot.png)
+![Captura de pantalla de la aplicación](images/pagina.png)
 
 Una aplicación web para traducir archivos de subtítulos (.srt) utilizando modelos de lenguaje locales a través de LM Studio. La aplicación ofrece una interfaz intuitiva con seguimiento de progreso en tiempo real.
 
@@ -17,7 +17,8 @@ Una aplicación web para traducir archivos de subtítulos (.srt) utilizando mode
 ## Requisitos Previos
 
 - Python 3.8 o superior
-- LM Studio ejecutándose localmente
+- LM Studio ejecutándose localmente con un modelo de lenguaje cargado
+  - **Modelo recomendado**: Llama-3.1-8b-instruct (ofrece un buen equilibrio entre velocidad y calidad de traducción)
 - Navegador web moderno (Chrome, Firefox, Edge, etc.)
 
 ## Instalación
@@ -41,7 +42,7 @@ Una aplicación web para traducir archivos de subtítulos (.srt) utilizando mode
 
 ## Configuración
 
-1. Asegúrate de tener LM Studio en ejecución y un modelo de lenguaje cargado.
+1. Asegúrate de tener LM Studio en ejecución con el modelo Llama-3.1-8b-instruct cargado. Este modelo ha demostrado ofrecer excelentes resultados en tareas de traducción.
 2. Por defecto, la aplicación intentará conectarse a `http://localhost:1234`. Si usas una configuración diferente, ajústala en la interfaz web.
 
 ## Uso
@@ -94,7 +95,9 @@ MAX_CONTENT_LENGTH=16777216  # 16MB
 
 ### Ajustar el modelo de lenguaje
 
-Puedes modificar el prompt de traducción en `traductor_final.py` en la función `traducir_lote` para adaptarlo a tus necesidades específicas.
+El modelo recomendado para esta aplicación es **Llama-3.1-8b-instruct**, ya que ofrece un buen equilibrio entre velocidad y calidad de traducción. Para usar otro modelo, simplemente cárgalo en LM Studio y asegúrate de que el endpoint de la API sea accesible.
+
+Puedes modificar el prompt de traducción en `traductor_final.py` en la función `traducir_lote` para adaptarlo a tus necesidades específicas o al modelo que estés utilizando.
 
 ### Cambiar el tema
 
