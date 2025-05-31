@@ -1,0 +1,19 @@
+Cómo usarlo:
+1. Preparación en LM Studio:
+
+Carga tu modelo preferido (Qwen2.5-14B o Llama-3.1-8B)
+Ve a "Local Server" y haz clic en "Start Server"
+Anota el puerto (generalmente 1234)
+
+2. Ejecutar el script:
+
+Guarda tu archivo .srt como "subtitulos_original.srt"
+Ejecuta: python traductor_subtitulos.py
+El script procesará ~25 líneas por vez (ajustable)
+
+3. Ventajas de este método:
+
+Mantiene el formato SRT exacto
+Procesa automáticamente todo el archivo
+Si falla un lote, continúa con los demás
+Pausa entre lotes para no sobrecargar

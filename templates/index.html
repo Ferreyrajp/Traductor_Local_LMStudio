@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traductor de Subtítulos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-language"></i> Traductor de Subtítulos</h1>
+        
+        <div class="settings-panel">
+            <div class="form-group">
+                <label for="lmstudio_url">URL de LM Studio:</label>
+                <input type="text" id="lmstudio_url" value="http://localhost" placeholder="http://localhost">
+            </div>
+            
+            <div class="form-group">
+                <label for="lmstudio_port">Puerto:</label>
+                <input type="text" id="lmstudio_port" value="1234" placeholder="1234">
+            </div>
+            
+            <div class="form-group">
+                <label for="lines_per_batch">Líneas por lote:</label>
+                <input type="number" id="lines_per_batch" value="8" min="1" max="20" step="1" class="number-input">
+                <div class="hint">Cantidad de líneas a traducir por lote (1-20)</div>
+            </div>
+        </div>
+        
+        <div class="upload-area" id="dropArea">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <p>Arrastra tu archivo .srt aquí o haz clic para seleccionar</p>
+            <input type="file" id="fileInput" accept=".srt" hidden>
+        </div>
+        
+        <div class="progress-container" id="progressContainer" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress" id="progressBar"></div>
+                <div class="progress-text" id="progressText">0%</div>
+            </div>
+            <div class="status" id="statusText">Preparando...</div>
+        </div>
+        
+        <div class="download-area" id="downloadArea" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <p>¡Traducción completada!</p>
+            <a href="#" class="btn" id="downloadBtn">Descargar archivo</a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
