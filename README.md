@@ -1,6 +1,6 @@
 # Traductor de Subtítulos con LM Studio
 
-![Captura de pantalla de la aplicación](images/pagina.png)
+![Captura de pantalla de la aplicación](image/pagina.png)
 
 Una aplicación web para traducir archivos de subtítulos (.srt) utilizando modelos de lenguaje locales a través de LM Studio. La aplicación ofrece una interfaz intuitiva con seguimiento de progreso en tiempo real.
 
