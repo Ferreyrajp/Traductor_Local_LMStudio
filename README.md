@@ -126,7 +126,7 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE)
 
 ## Créditos
 
-- Desarrollado por [Tu Nombre]
+- Desarrollado por Ferreyra Jorge Pablo
 - Utiliza [LM Studio](https://lmstudio.ai/) para la traducción de texto
 - Interfaz construida con Flask y Vanilla JavaScript
 
